@@ -1,4 +1,6 @@
 type term =
   | Variable int
-  | Abstraction string term
-  | Application term term;
+  | Abstraction (int, term)
+  | Application (term, term);
+
+type context = {variables: array string};
